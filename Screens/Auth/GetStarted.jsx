@@ -9,7 +9,7 @@ const GetStarted = () => {
 	const navigation = useNavigation()
 	return (
 		<SafeAreaView style={styles.container}>
-			<Text style={fonts.h1}>Let's get you started.</Text>
+			<Text style={fonts.h1}>Let's get you started</Text>
             <Text style={fonts.h3}>Enter your admission number.</Text>
 			<TextInput
                 style={{...inputs.filledTextLight, ...styles.admissionInput}}

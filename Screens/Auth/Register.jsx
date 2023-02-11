@@ -12,7 +12,7 @@ const Register = () => {
 				onPress={() => {
 					setCount(count+1)
 				}}
-				title="Press me!"
+				title="Press me twice!"
 			>
 			</Button>
 		</SafeAreaView>
