@@ -1,10 +1,12 @@
 import { SafeAreaView, StyleSheet, Text, TextInput, View } from "react-native";
-import React, { Component, useState } from "react";
+import React, { Component, useContext, useState } from "react";
 import fonts from "../../Constants/fonts";
 import inputs from "../../Constants/inputs";
+import { useNavigation } from "@react-navigation/native";
 
 const GetStarted = () => {
 	const [admissionNumber, setAdmissionNumber] = useState("");
+	const navigation = useNavigation()
 	return (
 		<SafeAreaView style={styles.container}>
 			<Text style={fonts.h1}>Let's get you started.</Text>
@@ -16,6 +18,9 @@ const GetStarted = () => {
 				autoFocus
 				maxLength={10}
 				autoCapitalize="characters"
+				onSubmitEditing={()=>{
+					navigation.navigate('Register')
+				}}
 			/>
 		</SafeAreaView>
 	);
